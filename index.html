@@ -31,6 +31,17 @@
     <body>
         <section class="content">
             <h1 class="title">Pokedex</h1>
+            <section class="search-box">
+                <input
+                    class="search_input"
+                    type="text"
+                    id="searchBox"
+                    placeholder="Pesquise o Pokémon"
+                />
+                <button class="button_input" id="searchButton" type="button">
+                    Pesquisar
+                </button>
+            </section>
 
             <ol id="pokemonList" class="pokemons">
                 <!-- ..... Pokemons here ..... -->
@@ -42,6 +53,7 @@
         </section>
 
         <!-- Nosso JS -->
+        <script src="/assets/js/search.js"></script>
         <script src="/assets/js/pokemon-model.js"></script>
         <!-- <script src="/assets/js/poke-api.js"></script> -->
         <script src="/assets/js/main.js"></script>
