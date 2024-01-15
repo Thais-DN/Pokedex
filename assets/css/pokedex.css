@@ -1,9 +1,30 @@
+.content {
+    background-color: rgb(233, 231, 231);
+    width: 100%;
+    height: 100%;
+}
+
 .pokemons {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     margin: 0;
     padding: 0;
     list-style: none;
+    background-image: url(../img/pokemon_wallpaper.jpg);
+    border-radius: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.title {
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem 0;
+    font-size: 3rem;
+    color: rgb(233, 231, 231);
+    background-image: url(../img/pokemon_wallpaper.jpg);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
 }
 
 .normal {
@@ -11,7 +32,7 @@
 }
 
 .grass {
-    background-color: #76c850;
+    background-color: #8cde66;
 }
 
 .fire {
@@ -84,19 +105,26 @@
     margin: 0.5rem;
     padding: 1rem;
     border-radius: 1rem;
+    border: #0000008e solid;
+}
+
+.pokemon .name_number {
+    display: flex;
+    justify-content: space-between;
 }
 
 .pokemon .number {
-    color: #000;
-    opacity: 0.3;
+    color: #0000008e;
+    opacity: 0.5;
     text-align: right;
-    font-size: 0.625rem;
+    font-size: 1.5rem;
 }
-
 .pokemon .name {
     text-transform: capitalize;
-    color: #504c4c;
-    margin-bottom: 0.25rem;
+    color: #0000008e;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    font-size: 1.5rem;
 }
 
 .pokemon .detail {
@@ -107,25 +135,27 @@
 }
 
 .pokemon .detail .types {
+    display: grid;
+    gap: 5px;
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
 .pokemon .detail .types .type {
-    color: #504c4c;
+    color: #0000008e;
     padding: 0.25rem 0.5rem;
     margin: 0.25rem 0;
-    font-size: 0.625rem;
+    font-size: 1rem;
     border-radius: 1rem;
     filter: brightness(1.1);
     text-align: center;
-    background-color: #ede7e77e;
+    background-color: #5653533e;
 }
 
 .pokemon .detail img {
-    width: 100%;
-    height: 150px;
+    max-width: 100%;
+    height: 130px;
 }
 
 .pagination {
@@ -139,12 +169,12 @@
 
 .pagination button {
     padding: 0.25rem 0.5rem;
-    margin: 0.25rem 0;
-    font-size: 0.625rem;
-    color: #fff;
-    background-color: #6c79db;
-    border: none;
-    border-radius: 1rem;
+    margin: 0;
+    font-size: 1rem;
+    color: rgb(233, 231, 231);
+    background-image: url(../img/pokemon_wallpaper.jpg);
+    border-radius: 0.5rem;
+    width: 60%;
 }
 
 @media screen and (min-width: 380px) {
@@ -153,8 +183,15 @@
     }
 }
 
+@media screen and (min-width: 420px) {
+    .pokemons {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media screen and (min-width: 576px) {
     .pokemons {
+        width: 100%;
         grid-template-columns: 1fr 1fr 1fr;
     }
 }

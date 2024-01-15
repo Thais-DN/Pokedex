@@ -46,8 +46,10 @@ async function fetchPokemons(offset, limit) {
 function convertPokemonToLi(pokemon) {
     return `
         <li class="pokemon ${pokemon.types[0]}">
-            <span class="number">#${pokemon.number}</span>
-            <span class="name">${pokemon.name}</span>
+            <div class="name_number">
+                <span class="name">${pokemon.name}</span>
+                <span class="number">#${pokemon.number}</span>
+            </div>
 
             <div class="detail">
                 <ol class="types">
